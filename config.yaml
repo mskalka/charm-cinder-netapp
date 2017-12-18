@@ -1,0 +1,36 @@
+options:
+  netapp-server-hostname:
+    type: string
+    description: ''
+  netapp-transport-type:
+    type: string
+    description: ''
+    default: http
+  netapp-server-port:
+    type: string
+    description: ''
+    default: '80'
+  netapp-storage-protocol:
+    type: string
+    description: ''
+  netapp-storage-family:
+    type: string
+    description: ''
+  netapp-login:
+    type: string
+    description: ''
+    default: cinder
+  netapp-password:
+    type: string
+    description: ''
+  netapp-vserver:
+    type: string
+    description: ''
+  netapp-lun-space-reservation:
+    type: string
+    description: ''
+    default: disabled
+  volume-backend-name:
+    type: string
+    description: ''
+    default:

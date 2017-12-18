@@ -1,0 +1,21 @@
+name: cinder-netapp
+summary: Configure OpenStack Cinder to use NetApp storage.
+maintainer: Michael Skalka <michael.skalka@canonical.com>
+description: |
+  This charm will add a 'netapp' section to the cinder.conf
+  file and place the approriate configuration information in that
+  section and enable it.
+tags:
+  - openstack
+  - storage
+series:
+  - xenial
+subordinate: true
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
