@@ -1,1 +1,5 @@
-repo: 
+includes: ['layer:openstack']
+options:
+  basic:
+    use_venv: true
+    include_system_packages: true
