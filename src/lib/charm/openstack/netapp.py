@@ -32,6 +32,8 @@ class NetAppCharm(OpenStackCharm):
                     NetAppSubordinateContext()()),
                 stateless=True,
             )
+            log('Relation data set for {}'.format(rel_id[0]))
+        status_set('active', 'Unit is ready')
 
 
 class NetAppSubordinateContext(OSContextGenerator):
@@ -50,7 +52,7 @@ class NetAppSubordinateContext(OSContextGenerator):
             'volume_driver',
             'cinder.volume.drivers.netapp.common.NetAppDriver'))
         for rid in relation_ids(self.interfaces[0]):
-            log('Setting relation data for {} as:'.format(rid))
+            log('Setting relation data for {}'.format(rid))
             self.related = True
             return {
                 "cinder": {
